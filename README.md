@@ -1,4 +1,4 @@
-# Wifi Camera StreamSye
+# Wifi Camera StreamEye
 
 This script will uninstall and reinstall StreamSye. Backup your streameye.sh file from /home/pi/streameye/extras/.
 
@@ -32,8 +32,8 @@ Ideally, this script should be run on a completely blank server to avoid any iss
 
 #### Ubuntu 16.04 LTS +
 ```bash
-cd /root/
-wget --no-cache -O se-install https://raw.githubusercontent.com/cmptscpeacock/softether-vpn-auto-install/master/softether-vpn-auto-install.bash && chmod +x se-install && ./se-install
+cd /home/pi
+wget --no-cache -O streameye-install https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/wifi-camera-streameye-auto-install.bash && chmod +x streameye-install && ./streameye-install
 ```
 
 ## Copyright & Credit
