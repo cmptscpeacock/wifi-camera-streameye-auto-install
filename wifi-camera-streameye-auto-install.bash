@@ -91,7 +91,7 @@ sudo mv streameye.sh /home/pi/streameye/extras/streameye.sh
 wget -O streameye.service https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/streameye.service
 sudo mv streameye.service /lib/systemd/system/streameye.service
 sudo systemctl --system daemon-reload
-sudo update-rc.d streameye defaults
 sudo systemctl enable streameye.service
 sudo systemctl start streameye.service
+sudo update-rc.d streameye defaults
 printf "\n\n streameye is now running"
