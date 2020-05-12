@@ -2,12 +2,7 @@
 
 # variables
 
-#seInstallFileUrl='https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.29-9680-rtm/softether-vpnserver-v4.29-9680-rtm-2019.02.28-linux-arm_eabi-32bit.tar.gz'
-#hubName='hubName1'
-
 ## credentials
-
-#hubAdmin='admin.user1'
 
 ## define console colours
 
@@ -37,11 +32,6 @@ while true; do
     esac
 done
 
-# execute as sudo
-
-#(( EUID != 0 )) && exec sudo -- "$0" "$@"
-#clear
-
 # remove previous versions
 
 ## stop streameye
@@ -66,11 +56,6 @@ fi
 sudo update-rc.d -f streameye remove
 
 # install StreamEye
-## create working directory
-
-#mkdir -p /tmp/softether-autoinstall
-#cd /tmp/softether-autoinstall
-
 ## Perform apt update and upgrade
 
 printf "\nPerforming update and upgrade"
