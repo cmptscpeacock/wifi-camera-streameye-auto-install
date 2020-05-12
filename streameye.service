@@ -1,0 +1,13 @@
+[Unit]
+Description=StreamEye Service
+After=multi-user.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash /home/pi/streameye/extras/streameye.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
