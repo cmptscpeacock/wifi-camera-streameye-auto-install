@@ -1,6 +1,6 @@
-# SoftEther VPN Server Auto Installer (Local Bridge version)
+# Wifi Camera StreamSye
 
-This script will uninstall and reinstall SoftEther VPN Server. If you are upgrading, BACKUP the config using the GUI or copy it from /opt/vpnserver/.
+This script will uninstall and reinstall StreamSye. Backup your streameye.sh file from /home/pi/streameye/extras/.
 
 It is recommended to backup various system files as detailed below as this script is designed to install SoftEther VPN Server completely unattended, create a bridge, create a hub, create an admin account for VPN connectivity, create a hub password, create a server password, create a random DDNS hostname, and enable Azure VPN.
 
