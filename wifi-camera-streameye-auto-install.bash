@@ -92,8 +92,6 @@ wget -O streameye.service https://raw.githubusercontent.com/cmptscpeacock/wifi-c
 sudo mv streameye.service /etc/systemd/system/streameye.service
 sudo systemctl --system daemon-reload
 sudo systemctl enable streameye.service
-#sudo systemctl start streameye.service
-#sudo update-rc.d streameye.service defaults
 
 # reboot the device 
 
