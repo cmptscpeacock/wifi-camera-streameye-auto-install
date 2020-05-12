@@ -10,4 +10,4 @@ ExecStart=/bin/bash /home/pi/streameye/extras/streameye.sh
 Restart=on-abort
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

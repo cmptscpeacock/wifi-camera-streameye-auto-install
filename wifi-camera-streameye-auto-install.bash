@@ -61,6 +61,11 @@ sudo update-rc.d -f streameye remove
 printf "\nPerforming update and upgrade"
 sudo apt-get update && sudo apt-get upgrade -y
 
+## install packages
+
+printf "\nInstalling Packages"
+sudo apt-get install -y ffmpeg git gcc make python-picamera python3-picamera
+
 ## start camera module at boot
 
 printf "\nEnabling Camera Module at boot"
@@ -70,11 +75,6 @@ sudo modprobe bcm2835-v4l2
 
 printf "\nEnabling Camera"
 sudo raspi-config nonint do_camera 0
-
-## install packages
-
-printf "\nInstalling Packages"
-sudo apt-get install -y ffmpeg git gcc make python-picamera python3-picamera
 
 ## download and install streameye
 
@@ -89,9 +89,13 @@ sudo make install
 wget -O streameye.sh https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/streameye.sh
 sudo mv streameye.sh /home/pi/streameye/extras/streameye.sh
 wget -O streameye.service https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/streameye.service
-sudo mv streameye.service /lib/systemd/system/streameye.service
+sudo mv streameye.service /etc/systemd/system/streameye.service
 sudo systemctl --system daemon-reload
 sudo systemctl enable streameye.service
-sudo systemctl start streameye.service
-sudo update-rc.d streameye defaults
-printf "\n\n streameye is now running"
+#sudo systemctl start streameye.service
+#sudo update-rc.d streameye.service defaults
+
+# reboot the device 
+
+printf "\n\n Rebooting now..."
+sudo reboot
