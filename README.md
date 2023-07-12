@@ -20,7 +20,7 @@ The Wifi Camera is hosted by StreamEye and runs on a Raspberry Pi running Raspbi
 
 #### Raspian
 ```bash
-cd /home/pi
+cd /home/$USER
 wget --no-cache -O streameye-install https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/wifi-camera-streameye-auto-install.bash && chmod +x streameye-install && ./streameye-install
 ```
 
