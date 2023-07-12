@@ -16,7 +16,7 @@ RESETUNDERLINE='\033[24m'
 
 # user confirmation
 
-printf "\n${RED}${UNDERLINE}IMPORTANT${WHITE}${RESETUNDERLINE}\n\nWifi Camera StreamEye is about to be uninstalled. Backup your streameye.sh file from /home/pi/streameye/extras/. \n\n"
+printf "\n${RED}${UNDERLINE}IMPORTANT${WHITE}${RESETUNDERLINE}\n\nWifi Camera StreamEye is about to be uninstalled. Backup your streameye.sh file from /home/$USER/streameye/extras/. \n\n"
 
 while true; do
     read -p "Reboot needed prior to uninstallation. Have you rebooted? (Y - will continue | N - will reboot now)?" answer
@@ -40,8 +40,8 @@ sudo systemctl stop streameye
 
 ## delete streameye directory
 
-if [ -d "/home/pi/streameye/" ]; then
-  sudo rm -rf /home/pi/streameye/ > /dev/null 2>&1
+if [ -d "/home/$USER/streameye/" ]; then
+  sudo rm -rf /home/$USER/streameye/ > /dev/null 2>&1
 fi
 
 ## check for streamsye service file
@@ -87,7 +87,7 @@ sudo make install
 ## configure streameye service
 
 wget -O streameye.sh https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/streameye.sh
-sudo mv streameye.sh /home/pi/streameye/extras/streameye.sh
+sudo mv streameye.sh /home/$USER/streameye/extras/streameye.sh
 wget -O streameye.service https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/streameye.service
 sudo mv streameye.service /etc/systemd/system/streameye.service
 sudo systemctl --system daemon-reload
