@@ -29,4 +29,4 @@ imxfx=none
 
 # run streameye with python
 
-/home/$USER/streameye/extras/raspimjpeg.py --brightness $brightness --contrast $contrast --saturation $saturation --sharpness $sharpness --width $width --height $height --rotation $rotation $vflip $hflip --framerate $framerate --quality $quality --zoom $zoom $preview --iso $iso --shutter $shutter --exposure $exposure --ev $ev --awb $awb --metering $metering --drc $drc $vstab $denoise --imxfx $imxfx | streameye -p $streamPort
+/home/USERNAME/streameye/extras/raspimjpeg.py --brightness $brightness --contrast $contrast --saturation $saturation --sharpness $sharpness --width $width --height $height --rotation $rotation $vflip $hflip --framerate $framerate --quality $quality --zoom $zoom $preview --iso $iso --shutter $shutter --exposure $exposure --ev $ev --awb $awb --metering $metering --drc $drc $vstab $denoise --imxfx $imxfx | streameye -p $streamPort
