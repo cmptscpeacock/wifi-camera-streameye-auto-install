@@ -2,6 +2,9 @@
 
 # variables
 
+replaceText="USERNAME"
+currentUser=$USER
+
 ## credentials
 
 ## define console colours
@@ -88,11 +91,12 @@ sudo make install
 
 wget -O streameye.sh https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/streameye.sh
 sudo mv streameye.sh /home/$USER/streameye/extras/streameye.sh
+
+sudo sed -i "s/$replaceText/$currentUser/g" /home/$USER/streameye/extras/streameye.sh
+
 wget -O streameye.service https://raw.githubusercontent.com/cmptscpeacock/wifi-camera-streameye-auto-install/master/streameye.service
 sudo mv streameye.service /etc/systemd/system/streameye.service
 
-replaceText="USERNAME"
-currentUser=$USER
 sudo sed -i "s/$replaceText/$currentUser/g" /etc/systemd/system/streameye.service
 
 sudo systemctl --system daemon-reload
