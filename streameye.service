@@ -6,7 +6,7 @@ After=network-online.target
 [Service]
 Type=simple
 User=root
-ExecStart=/bin/bash /home/$USER/streameye/extras/streameye.sh
+ExecStart=/bin/bash /home/USERNAME/streameye/extras/streameye.sh
 Restart=on-abort
 
 [Install]
